@@ -1,5 +1,10 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
+val jobjCoreVersion by extra("3.2.1")
+val mapstructVersion by extra("1.3.0.Final")
+val entCoreVersion by extra("1.7")
+val springToolExtensionsVersion by extra("1.4")
+
 plugins {
 	id("org.springframework.boot") version "2.1.9.RELEASE"
 	id("io.spring.dependency-management") version "1.0.8.RELEASE"
@@ -9,13 +14,9 @@ plugins {
 }
 
 group = "de.alpharogroup"
-version = "1-SNAPSHOT"
+version = "1"
 java.sourceCompatibility = JavaVersion.VERSION_1_8
 
-val jobjCoreVersion by extra("3.2.1")
-val mapstructVersion by extra("1.3.0.Final")
-val entCoreVersion by extra("1.7")
-val springToolExtensionsVersion by extra("1.4")
 
 val developmentOnly by configurations.creating
 configurations {
