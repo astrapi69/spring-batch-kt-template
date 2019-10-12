@@ -1,6 +1,8 @@
 # spring-batch-kt-template .travis.yml
 
 language: java
+before_install:
+   - chmod +x gradlew
 
 cache:
   directories:
