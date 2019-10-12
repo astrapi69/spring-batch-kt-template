@@ -51,3 +51,9 @@ gradle-app.setting
 # Cache of project
 .gradletasknamecache
 
+############################
+# Binaries generated files #
+############################
+/bin
+
+
