@@ -13,8 +13,8 @@ plugins {
 	kotlin("plugin.jpa") version "1.2.71"
 }
 
-group = "de.alpharogroup"
-version = "1.1-SNAPSHOT"
+group = "de.alpharogroup" // TODO change to specific group after cloning template project
+version = "1.1-SNAPSHOT" // TODO change to specific version after cloning template project
 java.sourceCompatibility = JavaVersion.VERSION_1_8
 
 

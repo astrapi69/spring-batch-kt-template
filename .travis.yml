@@ -1,4 +1,4 @@
-# spring-batch-kt-template .travis.yml
+# spring-batch-kt-template .travis.yml // TODO change to specific project name after cloning template project
 
 language: java
 before_install:
