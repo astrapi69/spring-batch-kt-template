@@ -1,16 +1,19 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 val jobjCoreVersion by extra("3.2.1")
-val mapstructVersion by extra("1.3.0.Final")
+val mapstructVersion by extra("1.3.1.Final")
 val entCoreVersion by extra("1.7")
 val springToolExtensionsVersion by extra("1.4")
 
 plugins {
-	id("org.springframework.boot") version "2.1.9.RELEASE"
+	val kotlinVersion = "1.3.50"
+	val springBootVersion = "2.1.9.RELEASE"
+	id("org.springframework.boot") version springBootVersion
 	id("io.spring.dependency-management") version "1.0.8.RELEASE"
-	kotlin("jvm") version "1.2.71"
-	kotlin("plugin.spring") version "1.2.71"
-	kotlin("plugin.jpa") version "1.2.71"
+	kotlin("jvm") version kotlinVersion
+	kotlin("plugin.spring") version kotlinVersion
+	kotlin("plugin.jpa") version kotlinVersion
+	kotlin("kapt") version kotlinVersion
 }
 
 group = "de.alpharogroup" // TODO change to specific group after cloning template project
@@ -49,6 +52,9 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.springframework.batch:spring-batch-test")
+	kapt("org.mapstruct:mapstruct-processor:$mapstructVersion")
+	kaptTest("org.mapstruct:mapstruct-processor:$mapstructVersion")
+
 }
 
 tasks.withType<KotlinCompile> {
